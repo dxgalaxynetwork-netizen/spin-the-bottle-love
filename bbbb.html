@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>Spin the Bottle LOVE</title>
+  <style>
+    body {
+      background: #fff8f8;
+      font-family: sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+    .bottle {
+      width: 200px;
+      height: 60px;
+      background: url('https://i.imgur.com/DkaE9mp.png') no-repeat center;
+      background-size: contain;
+      margin: 40px auto;
+      transition: transform 3s ease-out;
+    }
+    button {
+      padding: 10px 20px;
+      background: green;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="color:red;">Spin the Bottle LOVE 💘</h1>
+  <div class="bottle" id="bottle"></div>
+  <button onclick="spin()">স্পিন করুন</button>
+
+  <script>
+    let rotation = 0;
+    function spin() {
+      const extra = Math.floor(Math.random() * 360);
+      rotation += 360 * 3 + extra;
+      document.getElementById('bottle').style.transform = `rotate(${rotation}deg)`;
+    }
+  </script>
+
+</body>
+</html>
